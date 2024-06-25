@@ -19,23 +19,20 @@ let candidateAnswers;
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   let name = input.question("Enter your name: ");
-
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   let candidateAnswer = input.question("Who was the first American woman in space? ");
-
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  let candidateAnswer = true;
-  if (!candidateAnswer) {
-    console.log("Your answer is not correct!");
+  if (candidateAnswer === correctAnswer) {
+    console.log("Correct Answer!");
    } else {
-      console.log("Your answer is correct.")
+      console.log("Incorrect Answer!");
     }
 
 
