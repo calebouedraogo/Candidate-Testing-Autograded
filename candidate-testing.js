@@ -32,14 +32,15 @@ let candidateAnswers = [];
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  let name = input.question("Enter your name: ");
+  let candidateName = input.question("Enter your name: ");
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   for (let i = 0; i < questions.length; i++) {
-    candidateAnswer.push(input.question(questions[i] + " "));
+    candidateAnswers.push(input.question(questions[i]));
   }
+  return candidateAnswers;
 }
 
 function gradeQuiz(candidateAnswers) {
@@ -49,7 +50,7 @@ function gradeQuiz(candidateAnswers) {
     console.log(
       `Your answer: ${candidateAnswers[i]}
       Correct answer: ${correctAnswers[i]}`
-    )
+    );
   }
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
